@@ -1,0 +1,28 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "csv",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable2",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [],
+			"script": "source(output(\n\t\tmiddlename as string,\n\t\tsex as string,\n\t\tID as string,\n\t\tlastname as string,\n\t\tregno as string,\n\t\tfirstname as string,\n\t\tdob as string,\n\t\tphone as string,\n\t\temail as string,\n\t\tnextofkin as string,\n\t\tnextofkinaddress as string,\n\t\taddress as string,\n\t\tfacultyid as string,\n\t\tdeptid as string,\n\t\tpassword as string,\n\t\tcurrentlevel as string,\n\t\tnextofkinphone as string,\n\t\tstatus as string,\n\t\tpob as string,\n\t\tentry as string,\n\t\tstateid as string,\n\t\tlga as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 sink(input(\n\t\tregno as string,\n\t\tfirstname as string,\n\t\tlastname as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tmapColumn(\n\t\tregno,\n\t\tfirstname,\n\t\tlastname\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink1"
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"name": "pdf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "nims",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "regno",
+				"type": "varchar"
+			},
+			{
+				"name": "firstname",
+				"type": "varchar"
+			},
+			{
+				"name": "lastname",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "pdf"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
