@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "nimbojacks"
+		},
+		"AmazonS31_secretAccessKey": {
+			"value": ""
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureMySql1_connectionString": {
+			"value": ""
+		},
+		"AzureMySql2_connectionString": {
+			"value": ""
+		},
+		"AzureMySql3_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"csv_connectionString": {
+			"value": ""
+		},
+		"nims_connectionString": {
+			"value": ""
+		},
+		"AmazonS31_properties_typeProperties_accessKeyId": {
+			"value": "AKIAIROBAZVM4VPWDE7Q"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "\\\\LAPTOP-88274418\\seun"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "Gebruiker"
+		},
+		"trigger2_properties_typeProperties_scope": {
+			"value": "/subscriptions/b90f5fe2-87a8-4327-b28e-5ac34895d8b6/resourceGroups/rg_demo/providers/Microsoft.Storage/storageAccounts/sqlauditng"
+		},
+		"SSISintegrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "nimbojack.database.windows.net"
+		},
+		"SSISintegrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "irums1"
+		},
+		"SSISintegrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		}
+	}
+}
